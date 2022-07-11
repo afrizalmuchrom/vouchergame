@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import * as React from 'react';
 import './App.css';
+import Container from '@mui/material/Container';
+
+import Home from './Page/Home';
+import Formorder from './Page/Formorder';
 
 function App() {
+
+  React.useEffect(() => {
+    document.title = 'Astore'
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fixed>       
+      <Home/>
+    </Container>
   );
 }
 
